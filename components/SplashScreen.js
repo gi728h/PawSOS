@@ -9,7 +9,7 @@ class ImageLoader extends Component {
     onLoad = () => {
       Animated.timing(this.state.opacity, {
         toValue: 1,
-        duration: 500,
+        duration: 1000,
         useNativeDriver: true,
       }).start();
     }
@@ -56,7 +56,7 @@ export default function CustomSplashScreen() {
                 />
                 <Image
                     source={require("../assets/animation.gif")}
-                    resizeMode="resize"
+                    resizeMode="contain"
                     style={{ width: 400, height: 400 }}
                 />
             </View>
